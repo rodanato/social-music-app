@@ -1,11 +1,11 @@
 import { browser, by, element } from 'protractor';
 
-export class AustraliaDemoPage {
+export class AppPage {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('aus-root h1')).getText();
+    return element(by.css('app-root h1')).getText();
   }
 }

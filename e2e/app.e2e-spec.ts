@@ -1,14 +1,14 @@
-import { AustraliaDemoPage } from './app.po';
+import { AppPage } from './app.po';
 
 describe('australia-demo App', () => {
-  let page: AustraliaDemoPage;
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new AustraliaDemoPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to aus!!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });
