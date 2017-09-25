@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import StarshipList from '../components/starship-list'
+import { StarshipList } from '../components/starship-list/starship-list'
 
 const mapStateToProps = (state) => {
   return {

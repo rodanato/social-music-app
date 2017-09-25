@@ -1,10 +1,14 @@
 import React from 'react';
-import Starship from './starship/starship';
+import Starship from '../starship/starship';
 
+
+let searchWordInEachItem = (search, item) => {
+  return item.includes(search.toLowerCase());
+};
 
 let buildList = (list, search) => {
   return list
-    .filter(starship => starship.name.toLowerCase().includes(search.toLowerCase()))
+    .filter(starship => searchWordInEachItem(search, starship.name.toLowerCase()))
     .map((starshipData, i) => {
     return (
       <Starship starship={starshipData}
@@ -22,4 +26,7 @@ let StarshipList = ({list, search}) => {
 };
 
 
-export default StarshipList;
+export {
+  searchWordInEachItem,
+  StarshipList
+};

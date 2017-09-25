@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 let Starship = ({data, onClick, onBlur}) => {
     let input = '';
@@ -7,7 +7,7 @@ let Starship = ({data, onClick, onBlur}) => {
         speed: '',
         name: data.name
     };
-    
+
     return (
         <li>
             <span onClick={() => onClick(input.value)}>
@@ -15,12 +15,12 @@ let Starship = ({data, onClick, onBlur}) => {
             </span>
 
             <div>
-                Bla: <input width="60" type="text" 
+                Bla: <input width="60" type="text"
                     ref={node => input = node}
                 />
             </div>
             <div>
-                Speed <input width="60" type="text" 
+                Speed <input width="60" type="text"
                     ref={node => {
                         speedInput = node
                     }}
