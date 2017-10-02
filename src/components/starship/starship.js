@@ -3,10 +3,11 @@ import './starship.css'
 
 let Starship = ({starship}) => {
   return (
-    <li className="row row__primary">
+    <li className="primary-color">
       {starship.name}
     </li>
   );
 };
 
 export default Starship;
+

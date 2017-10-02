@@ -1,4 +1,3 @@
-import 'rxjs/add/operator/map';
 import {
   BrowserRouter as Router,
   Route,
@@ -41,7 +40,8 @@ class StarshipsLibrary extends Component {
 
   render () {
     return (
-      <div>
+      <div className="columns">
+        <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="Logo" />
         <Search />
         <VisibleStarshipList list={this.state.starshipsList} />
       </div>

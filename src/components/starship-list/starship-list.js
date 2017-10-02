@@ -19,7 +19,7 @@ let buildList = (list, search) => {
 
 let StarshipList = ({list, search}) => {
   return (
-    <ul>
+    <ul className="column is-5">
       {buildList(list, search)}
     </ul>
   );
