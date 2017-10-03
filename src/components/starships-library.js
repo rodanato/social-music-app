@@ -1,4 +1,3 @@
-import 'rxjs/add/operator/map';
 import {
   BrowserRouter as Router,
   Route,
@@ -10,7 +9,7 @@ import Search from "./search";
 import VisibleStarshipList from "../containers/starship-list";
 
 class StarshipsLibrary extends Component {
-  url = 'http://swapi.co/api/starships/';
+  url = 'https://swapi.co/api/starships/';
 
   constructor (props) {
     super(props);
@@ -29,6 +28,9 @@ class StarshipsLibrary extends Component {
         this.setState({
           starshipsList: data.results
         });
+      })
+      .catch(function() {
+        console.log("error");
       });
   }
 
@@ -38,7 +40,8 @@ class StarshipsLibrary extends Component {
 
   render () {
     return (
-      <div>
+      <div className="columns">
+        <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="Logo" />
         <Search />
         <VisibleStarshipList list={this.state.starshipsList} />
       </div>
@@ -50,7 +53,7 @@ const Home = () => (
   <div>
     <h2>Home</h2>
   </div>
-)
+);
 
 
 

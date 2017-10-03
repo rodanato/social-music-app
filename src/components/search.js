@@ -7,7 +7,7 @@ class Search extends Component {
 
   render () {
     return (
-      <form>
+      <form className="column is-4">
         <input type="text"
                onKeyUp={() => {
                  this.props.dispatch(search(this.searchValue.value));
