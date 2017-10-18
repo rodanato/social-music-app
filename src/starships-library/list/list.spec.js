@@ -1,4 +1,4 @@
-import { searchWordInEachItem } from './starship-list';
+import { searchWordInEachItem } from './list.component';
 
 let list = {
   'first': 'Water',
