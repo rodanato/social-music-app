@@ -8,10 +8,6 @@ import ListContainer from './list/list.container';
 class StarshipsLibrary extends Component {
   url = 'https://swapi.co/api/starships/';
 
-  constructor (props) {
-    super(props);
-  }
-
   loadStarships () {
     fetch(this.url)
       .then(res => {

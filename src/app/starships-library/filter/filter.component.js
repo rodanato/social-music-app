@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import filter from './filter.action';
+import PropTypes from 'prop-types';
 
 class Filter extends Component {
   formatFilmList (films) {
@@ -11,7 +12,6 @@ class Filter extends Component {
   }
 
   loadStarshipsFilter (list) {
-    console.log(list);
     return list.map((starship, i)=> {
       let filmValue = this.formatFilmList(starship.films);
 
@@ -30,7 +30,6 @@ class Filter extends Component {
         By film:
 
         <select onChange={(event) => {
-                  console.log(event.target.value);
                   this.props.dispatch(filter(event.target.value));
                 }}>
           {this.loadStarshipsFilter(this.props.list || [])}
@@ -41,5 +40,8 @@ class Filter extends Component {
   }
 };
 
+Filter.propTypes = {
+  filmValue: PropTypes.string
+};
 
 export default Filter;
