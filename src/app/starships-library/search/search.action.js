@@ -1,4 +1,3 @@
-
 const search = (searchValue) => {
   return {
     type: 'SEARCH',
@@ -6,5 +5,4 @@ const search = (searchValue) => {
   }
 };
 
-
-export { search };
+export default search;

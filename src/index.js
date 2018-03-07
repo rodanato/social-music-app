@@ -3,14 +3,14 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import './index.css'
 
-import store from './store';
-import StarshipsLibrary from './components/starships-library';
+import store from './app/store';
+import AppRouter from './app/router';
 
 const container = document.getElementById('root');
 
 render(
   <Provider store={store}>
-    <StarshipsLibrary />
+    <AppRouter />
   </Provider>,
   container
 );
